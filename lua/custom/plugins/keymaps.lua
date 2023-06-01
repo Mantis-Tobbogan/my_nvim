@@ -11,20 +11,20 @@ local M = {
 	vim.keymap.set("n", "N", "Nzzzv"),
 
 	--vim.keymap.set("n", "<leader>vwm", function()
-	    --require("vim-with-me").StartVimWithMe()
+	--require("vim-with-me").StartVimWithMe()
 	--end)
 	--vim.keymap.set("n", "<leader>svwm", function()
-	    --require("vim-with-me").StopVimWithMe()
+	--require("vim-with-me").StopVimWithMe()
 	--end)
 
 	-- greatest remap ever
-	vim.keymap.set("x", "<leader>pp", [["_dP]]),
+	vim.keymap.set("x", "<leader>P", [["_dP]]),
 
 	-- next greatest remap ever : asbjornHaland
-	vim.keymap.set({"n", "v"}, "<leader>y", [["+y]]),
+	vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]),
 	vim.keymap.set("n", "<leader>Y", [["+Y]]),
 
-	vim.keymap.set({"n", "v"}, "<leader>d", [["_d]]),
+	vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]),
 
 	-- This is going to get me cancelled
 	vim.keymap.set("i", "<C-c>", "<Esc>"),
@@ -37,16 +37,14 @@ local M = {
 	vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz"),
 	vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz"),
 	vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz"),
-
 	vim.keymap.set("n", "<leader>sub", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]),
 	vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }),
+	vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>"),
 
-	vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton game_of_life<CR>"),
-
-	-- From chris@scratcher -- 
+	-- From chris@scratcher --
 	-- Stay in visual indent mode
-	vim.keymap.set("v", "<", "<gv", { silent = true}),
-	vim.keymap.set("v", ">", ">gv", { silent = true}),
+	vim.keymap.set("v", "<", "<gv", { silent = true }),
+	vim.keymap.set("v", ">", ">gv", { silent = true }),
 
 	-- Resize with arrows
 	vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", { silent = true }),
@@ -55,9 +53,9 @@ local M = {
 	vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { silent = true }),
 
 	-- Plugin Related
-	vim.keymap.set("n", "<F3>", ":NvimTreeToggle<CR>", { silent = true }),
+	vim.keymap.set("n", "<F4>", ":NvimTreeToggle<CR>", { silent = true }),
 	vim.keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", { silent = true }),
-	vim.keymap.set("n", "<A-i>", ":ToggleTerm<CR>", { silent = true}),
+	vim.keymap.set("n", "<A-i>", ":ToggleTerm<CR>", { silent = true }),
 
 	-- Custom LSP related
 	vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help)
