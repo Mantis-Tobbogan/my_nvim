@@ -21,16 +21,6 @@ return {
 		end
 	},
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		config = function()
-			Color = Color or "rose-pine"
-			vim.cmd.colorscheme(Color)
-			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-		end
-	},
-	{
 		'iamcco/markdown-preview.nvim',
 		build = function() vim.fn['mkdp#util#install']() end,
 		config = function()
@@ -82,7 +72,6 @@ return {
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
 		}
-	}
-
+	},
 
 }
