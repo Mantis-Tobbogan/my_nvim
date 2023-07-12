@@ -1,8 +1,13 @@
 local M = {
   "kyazdani42/nvim-tree.lua",
   commit = "59e65d88db177ad1e6a8cffaafd4738420ad20b6",
-  event = "VimEnter"
+  event = "VimEnter",
+  keys = {
+    { "<leader>e", "<cmd>NvimTreeFocus<CR>",  desc = "open & focus NvimTree" },
+    { "<F4>",      "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" }
+  },
 }
+
 
 function M.config()
   local tree_cb = require("nvim-tree.config").nvim_tree_callback
@@ -56,6 +61,7 @@ function M.config()
           { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
           { key = "h",                  cb = tree_cb "close_node" },
           { key = "v",                  cb = tree_cb "vsplit" },
+          { key = "<C-e>",              action = "" },
         },
       },
     },

@@ -6,12 +6,15 @@
 local M = {
 	'akinsho/toggleterm.nvim',
 	version = "*",
-	config = true
+	config = true,
+	keys = {
+		{ "<A-i>", ":ToggleTerm<CR>", silent = true },
+	}
 }
 
 function M.config()
 	local term_set = require("toggleterm")
-	term_set.setup{
+	term_set.setup {
 		size = 20,
 		open_mapping = [[<c-\>]],
 		hide_numbers = true,
@@ -75,7 +78,6 @@ function M.config()
 
 	function _PYTHON_TOGGLE()
 		python:toggle()
-
 	end
 end
 
