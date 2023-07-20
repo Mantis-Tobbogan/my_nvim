@@ -1,7 +1,8 @@
 local M = {
   "scalameta/nvim-metals",
   dependencies = { "nvim-lua/plenary.nvim" },
-  commit = "1b9053139342ed9ab47b29e5a1076fcbd971a565",
+  --commit = "92e2085f08da4598c6ae0c19c332c5c04b33a2c5",
+  ft = "scala"
 }
 
 function M.config()
