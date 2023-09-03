@@ -251,8 +251,7 @@ vim.o.expandtab = 4
 vim.o.wrap = false
 vim.o.swapfile = false
 vim.o.backup = false
--- vim.o.undodir = os.getenv("HOME") .. "\.vim\undodir"
-vim.o.undodir = "C:\\Users\\dhanu\\.vim\\undodir"
+vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 vim.o.hlsearch = false
 vim.o.incsearch = true
