@@ -16,8 +16,10 @@ local M = {
 	vim.keymap.set("x", "<leader>P", [["+p]], { desc = "Paste from the clipboard" }),
 
 	-- next greatest remap ever : asbjornHaland
-	vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]),
-	vim.keymap.set("n", "<leader>Y", [["+Y]]),
+	--vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]),
+	vim.keymap.set({ "n", "v" }, "<C-c>", [["+y]]),
+	--vim.keymap.set("n", "<leader>Y", [["+Y]]),
+	vim.keymap.set("n", "<C-c>", [["+Y]]),
 
 	vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]),
 
